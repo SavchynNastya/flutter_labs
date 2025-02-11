@@ -3,15 +3,20 @@ import 'package:flutter_labs/initial/entities/lab.dart';
 import 'package:flutter_labs/initial/entities/task.dart';
 import 'package:flutter_labs/initial/screens/task_details_screen.dart';
 import 'package:flutter_labs/labs/lab1/task1/screens/fuel_calculator_screen.dart';
+import 'package:flutter_labs/labs/lab1/task2/screens/fuel_oil_calculator_screen.dart';
 
 class TaskListScreen extends StatelessWidget {
   final Lab lab;
+
   const TaskListScreen({super.key, required this.lab});
 
   List<Task> getTasksForLab(int labId) {
     switch (labId) {
       case 1:
-        return [const Task("1", "Fuel Calculator", FuelCalculatorScreen()), Task("2", "Task 2", Container())];
+        return [
+          const Task("1", "Fuel Calculator", FuelCalculatorScreen()),
+          const Task("2", "Fuel Oil Calculator", FuelOilCalculatorScreen())
+        ];
       case 2:
         return [Task("1", "Task 1", Container())];
       case 3:
@@ -44,7 +49,12 @@ class TaskListScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => TaskDetailsScreen(task: task, labId: lab.id, taskScreen: task.screen, taskTitle: task.name)
+                      builder: (context) => TaskDetailsScreen(
+                        task: task,
+                        labId: lab.id,
+                        taskScreen: task.screen,
+                        taskTitle: task.name,
+                      ),
                     ),
                   );
                 },

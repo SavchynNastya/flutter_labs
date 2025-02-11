@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_labs/labs/lab1/task1/utils/fuel_calculator.dart';
 import 'package:flutter_labs/labs/lab1/task1/widgets/fuel_input_field.dart';
 import 'package:flutter_labs/labs/lab1/task1/widgets/heating_value_results.dart';
+import 'package:flutter_labs/labs/lab1/task1/widgets/mass_results.dart';
 
 class FuelCalculatorScreen extends StatefulWidget {
   const FuelCalculatorScreen({super.key});
@@ -101,17 +102,21 @@ class FuelCalculatorScreenState extends State<FuelCalculatorScreen> {
             const SizedBox(height: 16),
             ElevatedButton(
                 onPressed: calculateResults, child: const Text("Calculate")),
-            const SizedBox(height: 16),
-            const Text("Dry Mass Results",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            ...dryMassResult.entries
-                .map((e) => Text("${e.key}: ${e.value.toStringAsFixed(2)}")),
-            const SizedBox(height: 16),
-            const Text("Combustible Mass Results",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            ...combustibleMassResult.entries
-                .map((e) => Text("${e.key}: ${e.value.toStringAsFixed(2)}")),
-            const SizedBox(height: 16),
+            // const SizedBox(height: 16),
+            // const Text("Dry Mass Results",
+            //     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            // ...dryMassResult.entries
+            //     .map((e) => Text("${e.key}: ${e.value.toStringAsFixed(2)}")),
+            // const SizedBox(height: 16),
+            // const Text("Combustible Mass Results",
+            //     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            // ...combustibleMassResult.entries
+            //     .map((e) => Text("${e.key}: ${e.value.toStringAsFixed(2)}")),
+            // const SizedBox(height: 16),
+            MassResults(
+              dryMassResult: dryMassResult,
+              combustibleMassResult: combustibleMassResult,
+            ),
             // Text("Lower Heating Value (Working): ${lowerHeatingValueResult.toStringAsFixed(2)}"),
             // Text("Lower Heating Value (Dry): ${lowerHeatingValueResultDry.toStringAsFixed(2)}"),
             // Text("Lower Heating Value (Combustible): ${lowerHeatingValueResultCombustible.toStringAsFixed(2)}"),
