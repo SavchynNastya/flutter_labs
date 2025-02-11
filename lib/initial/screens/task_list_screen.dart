@@ -4,6 +4,7 @@ import 'package:flutter_labs/initial/entities/task.dart';
 import 'package:flutter_labs/initial/screens/task_details_screen.dart';
 import 'package:flutter_labs/labs/lab1/task1/screens/fuel_calculator_screen.dart';
 import 'package:flutter_labs/labs/lab1/task2/screens/fuel_oil_calculator_screen.dart';
+import 'package:flutter_labs/labs/lab2/task1/screens/emission_calculator_screen.dart';
 
 class TaskListScreen extends StatelessWidget {
   final Lab lab;
@@ -18,7 +19,7 @@ class TaskListScreen extends StatelessWidget {
           const Task("2", "Fuel Oil Calculator", FuelOilCalculatorScreen())
         ];
       case 2:
-        return [Task("1", "Task 1", Container())];
+        return [const Task("1", "Emission Calculator", EmissionCalculatorScreen())];
       case 3:
         return [Task("1", "Task 1", Container())];
       case 4:
