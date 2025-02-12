@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_labs/labs/lab3/utils/solar_calculator.dart';
 
 class SolarCalculatorScreen extends StatefulWidget {
+  const SolarCalculatorScreen({super.key});
+
   @override
   _SolarCalculatorScreenState createState() => _SolarCalculatorScreenState();
 }

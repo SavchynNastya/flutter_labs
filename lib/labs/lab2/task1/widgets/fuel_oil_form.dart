@@ -5,8 +5,7 @@ import 'package:flutter_labs/labs/lab2/task1/widgets/emission_input_field.dart';
 class FuelOilForm extends StatefulWidget {
   final void Function(double) onCalculationUpdated;
 
-  const FuelOilForm({Key? key, required this.onCalculationUpdated})
-      : super(key: key);
+  const FuelOilForm({super.key, required this.onCalculationUpdated});
 
   @override
   _FuelOilFormState createState() => _FuelOilFormState();

@@ -5,8 +5,7 @@ import 'package:flutter_labs/labs/lab2/task1/widgets/emission_input_field.dart';
 class CoalForm extends StatefulWidget {
   final void Function(double) onCalculationUpdated;
 
-  const CoalForm({Key? key, required this.onCalculationUpdated})
-      : super(key: key);
+  const CoalForm({super.key, required this.onCalculationUpdated});
 
   @override
   _CoalFormState createState() => _CoalFormState();
@@ -40,7 +39,7 @@ class _CoalFormState extends State<CoalForm> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 16,
       ),
       child: Form(
