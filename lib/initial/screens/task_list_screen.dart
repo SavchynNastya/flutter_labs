@@ -8,6 +8,7 @@ import 'package:flutter_labs/labs/lab2/task1/screens/emission_calculator_screen.
 import 'package:flutter_labs/labs/lab3/screens/solar_calculator_screen.dart';
 import 'package:flutter_labs/labs/lab4/screens/short_circuit_calculator_screen.dart';
 import 'package:flutter_labs/labs/lab5/screens/electrical_calculations_screen.dart';
+import 'package:flutter_labs/labs/lab6/screens/electrical_load_calculations_screen.dart';
 
 class TaskListScreen extends StatelessWidget {
   final Lab lab;
@@ -30,7 +31,7 @@ class TaskListScreen extends StatelessWidget {
       case 5:
         return [const Task("1", "Electrical Calculator", ElectricalCalculationsScreen())];
       case 6:
-        return [Task("1", "Task 1", Container())];
+        return [const Task("1", "Load Calculator", ElectricalLoadCalculationsScreen())];
       default:
         return [];
     }
