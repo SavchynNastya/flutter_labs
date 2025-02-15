@@ -43,83 +43,43 @@ class FuelCalculatorScreenState extends State<FuelCalculatorScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // FuelInputField(
-            //     label: "HP",
-            //     value: hp,
-            //     onChanged: (v) => setState(() => hp = v)),
-            // FuelInputField(
-            //     label: "CP",
-            //     value: cp,
-            //     onChanged: (v) => setState(() => cp = v)),
-            // FuelInputField(
-            //     label: "SP",
-            //     value: sp,
-            //     onChanged: (v) => setState(() => sp = v)),
-            // FuelInputField(
-            //     label: "NP",
-            //     value: np,
-            //     onChanged: (v) => setState(() => np = v)),
-            // FuelInputField(
-            //     label: "OP",
-            //     value: op,
-            //     onChanged: (v) => setState(() => op = v)),
-            // FuelInputField(
-            //     label: "WP",
-            //     value: wp,
-            //     onChanged: (v) => setState(() => wp = v)),
-            // FuelInputField(
-            //     label: "AP",
-            //     value: ap,
-            //     onChanged: (v) => setState(() => ap = v)),
             FuelInputField(
                 label: "HP",
-                value: hp, // Set initial value to 2.8
+                value: hp,
                 onChanged: (v) => setState(() => hp = v)),
             FuelInputField(
                 label: "CP",
-                value: cp, // Set initial value to 72.3
+                value: cp,
                 onChanged: (v) => setState(() => cp = v)),
             FuelInputField(
                 label: "SP",
-                value: sp, // Set initial value to 2.0
+                value: sp,
                 onChanged: (v) => setState(() => sp = v)),
             FuelInputField(
                 label: "NP",
-                value: np, // Set initial value to 1.1
+                value: np,
                 onChanged: (v) => setState(() => np = v)),
             FuelInputField(
                 label: "OP",
-                value: op, // Set initial value to 1.3
+                value: op,
                 onChanged: (v) => setState(() => op = v)),
             FuelInputField(
                 label: "WP",
-                value: wp, // Set initial value to 5.5
+                value: wp,
                 onChanged: (v) => setState(() => wp = v)),
             FuelInputField(
                 label: "AP",
-                value: ap, // Set initial value to 15.0
+                value: ap,
                 onChanged: (v) => setState(() => ap = v)),
             const SizedBox(height: 16),
             ElevatedButton(
-                onPressed: calculateResults, child: const Text("Calculate")),
-            // const SizedBox(height: 16),
-            // const Text("Dry Mass Results",
-            //     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            // ...dryMassResult.entries
-            //     .map((e) => Text("${e.key}: ${e.value.toStringAsFixed(2)}")),
-            // const SizedBox(height: 16),
-            // const Text("Combustible Mass Results",
-            //     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            // ...combustibleMassResult.entries
-            //     .map((e) => Text("${e.key}: ${e.value.toStringAsFixed(2)}")),
-            // const SizedBox(height: 16),
+              onPressed: calculateResults,
+              child: const Text("Calculate"),
+            ),
             MassResults(
               dryMassResult: dryMassResult,
               combustibleMassResult: combustibleMassResult,
             ),
-            // Text("Lower Heating Value (Working): ${lowerHeatingValueResult.toStringAsFixed(2)}"),
-            // Text("Lower Heating Value (Dry): ${lowerHeatingValueResultDry.toStringAsFixed(2)}"),
-            // Text("Lower Heating Value (Combustible): ${lowerHeatingValueResultCombustible.toStringAsFixed(2)}"),
             HeatingValueResults(
               lowerHeatingValueResult: lowerHeatingValueResult,
               lowerHeatingValueResultDry: lowerHeatingValueResultDry,
